@@ -9,6 +9,9 @@ Feature: Test the Sauce Demo application
     When user is on home page validate title
     And validate home page url
 
-    
-    Scenario: validate home page logo
+  Scenario: validate home page logo
     When user is on home page and validate home page logo
+
+  Scenario: Validate Pim page
+    When user click on pim link
+    And user validate pim page by using url
