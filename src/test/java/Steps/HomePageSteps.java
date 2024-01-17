@@ -21,5 +21,11 @@ public class HomePageSteps extends BaseClass{
 	  Assert.assertEquals(homePage.validateUrl().contains("orange"), true);
 		
 	}
+	
+	@When("user is on home page and validate home page logo")
+	public void user_is_on_home_page_and_validate_home_page_logo() {
+	  Assert.assertTrue(homePage.validateLogo());
+	}
+
 
 }

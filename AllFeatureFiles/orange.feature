@@ -8,3 +8,7 @@ Feature: Test the Sauce Demo application
   Scenario: validate Homepage Title and Url
     When user is on home page validate title
     And validate home page url
+
+    
+    Scenario: validate home page logo
+    When user is on home page and validate home page logo
