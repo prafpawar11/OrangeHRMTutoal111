@@ -15,3 +15,6 @@ Feature: Test the Sauce Demo application
   Scenario: Validate Pim page
     When user click on pim link
     And user validate pim page by using url
+    And user click on add employee and enter "Rucha" and "zaware" and click on save button
+    And user capture employee id
+    And user click on employee list
