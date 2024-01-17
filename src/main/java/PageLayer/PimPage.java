@@ -30,6 +30,21 @@ public class PimPage  extends BaseClass{
 	@FindBy(xpath = "//a[text()='Employee List']")
 	private WebElement emplist;
 	
+	@FindBy(xpath="(//input[@class='oxd-input oxd-input--active'])[2]")
+	private WebElement empId;
+	
+	@FindBy(xpath="//button[text()=' Search ']")
+	private WebElement searchButton;
+	
+	@FindBy(xpath="//i[@class='oxd-icon bi-check oxd-checkbox-input-icon']/following::input[1]")
+	private WebElement checkId;
+	
+	@FindBy(xpath="//button[text()=' Delete Selected ']")
+	private WebElement deleteLink;
+	
+	@FindBy(xpath="//button[text()=' Yes, Delete ']")
+	private WebElement confirmDelete;
+	
 	
 	
 	public PimPage()
@@ -66,4 +81,22 @@ public class PimPage  extends BaseClass{
 		Thread.sleep(5000);
 		Wait.click(emplist);
 	}
+	public void clickSearch(String eid) throws InterruptedException
+	{
+		Thread.sleep(5000);
+		Wait.sendKeys(empId, eid);
+		Wait.click(searchButton);
+	}
+	public void selectEidCheck() throws InterruptedException
+	{
+		Wait.click(checkId);
+		Thread.sleep(5000);
+	}
+	public void clickOnDelete() throws InterruptedException
+	{
+		Wait.click(deleteLink);
+		Thread.sleep(5000);
+		Wait.click(confirmDelete);
+	}
+	
 }

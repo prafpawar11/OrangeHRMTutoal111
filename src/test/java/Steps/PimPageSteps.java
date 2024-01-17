@@ -35,6 +35,22 @@ public class PimPageSteps extends BaseClass {
 	public void user_click_on_employee_list() throws InterruptedException {
 	  pimPage.clickOnEmpList();
 	}
+	
+	@When("user search employee using employee id and click on search button")
+	public void user_search_employee_using_employee_id_and_click_on_search_button() throws InterruptedException {
+	    
+		pimPage.clickSearch(empId);
+	}
+	@When("user  select searched employee and click on checkbox")
+	public void user_select_searched_employee_and_click_on_checkbox() throws InterruptedException {
+	    
+		pimPage.selectEidCheck();
+	}
+	@When("user click on delete")
+	public void user_click_on_delete() throws InterruptedException {
+		pimPage.clickOnDelete();
+	   
+	}
 
 
 }
